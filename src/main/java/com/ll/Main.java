@@ -1,18 +1,21 @@
 package com.ll;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
     static String name;
     static String text;
     static Scanner sc = new Scanner(System.in);
-    static String command = sc.nextLine();
+    static ArrayList<String> textlist = new ArrayList<>();
+    static ArrayList<String> namelist = new ArrayList<>();
     public static void main(String[] args) {
         loof();
     }
     static void loof(){
         while(true){
             print();
+            String command = sc.nextLine().trim();
             if (command.equals("종료")) {
                 close();
             }
@@ -43,14 +46,19 @@ public class Main {
     }
     static void insert(){
         System.out.printf("제목 : ");
-        name = sc.nextLine();
+        name = sc.nextLine().trim();
+        namelist.add(name);
         System.out.printf("내용 : ");
-        text = sc.nextLine();
+        text = sc.nextLine().trim();
+        textlist.add(text);
+        System.out.println("게시글이 등록되었습니다");
         loof();
     }
     static void insert_output(){
-        System.out.println("제목 : " + name);
-        System.out.println("내용 : " + text);
+        for (int i = 0; i < namelist.size(); i++) {
+            System.out.println(i+1 + "번 게시물 제목 : " + namelist.get(i));
+            System.out.println(i+1 + "번 게시물 내용 : " + textlist.get(i));
+            }
         loof();
     }
 }
