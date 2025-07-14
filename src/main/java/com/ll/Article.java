@@ -15,23 +15,23 @@ public class Article {
         return id;
     }
 
-    public int setid() {
-        return id;
+    public void setid(int id) {
+        this.id = id;
     }
 
     public String getsub() {
         return subject;
     }
 
-    public String setsub() {
-        return subject;
+    public void setsub(String subject) {
+        this.subject = subject;
     }
 
     public String getcont() {
         return content;
     }
 
-    public String setcont() {
-        return content;
+    public void setcont(String content) {
+        this.content = content;
     }
 }
