@@ -1,11 +1,11 @@
 package com.ll;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        new APP().loof();
+        Container.init();
+        new APP().run();
+        Container.close();
     }
-
 }
