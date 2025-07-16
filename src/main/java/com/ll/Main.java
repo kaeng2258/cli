@@ -1,11 +1,9 @@
 package com.ll;
 
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
         Container.init();
-        new APP().run();
+        new App().run();
         Container.close();
     }
 }

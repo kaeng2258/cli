@@ -22,7 +22,7 @@ public class ArticleController {
 
         int id = articleService.create(subject,content);
 
-        System.out.printf("%d번 게시글이 등록되었습니다.\n", articleService.lastId);
+        System.out.printf("%d번 게시글이 등록되었습니다.\n", id);
     }
 
     public void list() {
@@ -43,7 +43,7 @@ public class ArticleController {
             System.out.println("잘못됩입력입니다");
             return;
         }
-        Article article = articleService.getFindById(id);
+        Article article = articleService.FindById(id);
 
         if (article == null) {
             System.out.printf("%d번 게시물은 존재하지 않습니다.\n", id);
@@ -61,7 +61,7 @@ public class ArticleController {
             System.out.println("잘못됩입력입니다");
             return;
         }
-        Article article = articleService.getFindById(id);
+        Article article = articleService.FindById(id);
 
         if (article == null) {
             System.out.printf("%d번 게시물은 존재하지 않습니다.\n", id);
